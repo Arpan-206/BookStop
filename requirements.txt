@@ -1,0 +1,6 @@
+asgiref
+autopep8
+certifi==2021.5.30
+Django
+django-jazzmin==2.4.7
+Pillow==8.3.1
