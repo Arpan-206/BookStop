@@ -1,0 +1,8 @@
+db.sqlite3
+
+/media/books
+/media/images
+.idea/
+.vscode/
+__pycache__/
+migrations/

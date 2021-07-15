@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block head %}
+<title>Home - BookStop</title>
+{% endblock %}
+
+<body>
+    {% block content %}
+    <section class="article-list" style="background: rgb(238, 244, 247);">
+        <div class="container">
+            <!-- Start: Intro -->
+            <div class="intro">
+                <h2 class="text-center">{{category.name}}</h2>
+                <p class="text-center"></p>
+            </div><!-- End: Intro -->
+            <!-- Start: Articles -->
+            <div class="row text-center justify-content-center articles">
+                {% for book in books %}
+                {% if forloop.counter < 3 %}
+                <div class="col-sm-6 col-md-4 item"><a href="{% url 'book_view' pk=book.id %}"><img class="img-fluid" class="img-thumbnail" style="width: 100%; height:100%; max-width: 480px; max-height: 240px;" src="{{ book.image.url }}"></a>
+                    <h3 class="name">{{ book.title }}</h3>
+                    <p class="description">{{ book.description }}</p><a
+                        class="action" href="#"><i class="fa fa-arrow-circle-right"
+                            style="color: var(--bs-blue);border-color: rgb(57,115,200);"></i></a>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div><!-- End: Articles -->
+        </div>
+    </section><!-- End: Article List -->
+    {% endblock %}
