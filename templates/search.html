@@ -20,7 +20,7 @@
                 <div class="col-sm-6 col-md-4 item"><a href="{% url 'book_view' pk=book.id %}"><img class="img-fluid" class="img-thumbnail" style="width: 100%; height:100%; max-width: 480px; max-height: 240px;" src="{{ book.image.url }}"></a>
                     <h3 class="name">{{ book.title }}</h3>
                     <p class="description">{{ book.description }}</p><a
-                        class="action" href="#"><i class="fa fa-arrow-circle-right"
+                        class="action" href="{% url 'book_view' pk=book.id %}"><i class="fa fa-arrow-circle-right"
                             style="color: var(--bs-blue);border-color: rgb(57,115,200);"></i></a>
                 </div>
                 {% endif %}

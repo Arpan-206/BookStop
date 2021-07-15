@@ -11,6 +11,10 @@ def index(request):
     books = Book.objects.all().order_by('-created_at')
     return render(request, 'index.html', context={"books": books})
 
+def all_books(request):
+    books = Book.objects.all().order_by('-created_at')
+    return render(request, 'all.html', context={"books": books})
+
 def login_view(request):
     if request.method == "POST":
 

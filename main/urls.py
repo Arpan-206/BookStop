@@ -10,6 +10,7 @@ admin.empty_value_display = '**Empty**'
 urlpatterns = [
     path("", views.index, name="index"),
     path("shelf/<str:category>/", views.shelf_view, name="shelf_view"),
+    path("all/", views.all_books, name="all_books"),
     path("book/<int:pk>/", views.book_view, name="book_view"),
     path("logout", views.logout_view, name="logout"),
     path("login/", views.login_view, name="login"),

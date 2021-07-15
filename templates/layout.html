@@ -26,6 +26,8 @@
         <ul class="navbar-nav me-auto" style="color: rgb(239,228,228);">
           <li class="nav-item"><a class="nav-link" href="admin/main/book/add/" style="color: rgb(255,255,255);">Add A Book</a>
           </li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'all_books' %}" style="color: rgb(255,255,255);">All Books</a>
+          </li>
         </ul>
         {% if request.user.is_authenticated %}
         <ul class="navbar-nav" style="color: rgb(239,228,228);">
