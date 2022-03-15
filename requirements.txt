@@ -3,4 +3,4 @@ autopep8
 certifi==2021.5.30
 Django
 django-jazzmin==2.4.7
-Pillow==9.0.0
+Pillow==9.0.1
